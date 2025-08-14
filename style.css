@@ -1,0 +1,19 @@
+:root {
+  --color-primario: #ff6600;
+  --color-secundario: #333;
+  --color-fondo: #f9f9f9;
+  --color-texto: #555;
+  --max-ancho: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
