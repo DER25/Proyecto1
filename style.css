@@ -17,3 +17,31 @@ body {
   background-color: var(--color-fondo);
   color: var(--color-texto);
 }
+
+header {
+  background-color: var(--color-primario);
+  padding: 1rem;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--max-ancho);
+  margin: auto;
+}
+
+header nav h1 {
+  color: #fff;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+}
