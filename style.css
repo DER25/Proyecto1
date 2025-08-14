@@ -45,3 +45,52 @@ header nav a {
   color: #fff;
   text-decoration: none;
 }
+
+.productos {
+  max-width: var(--max-ancho);
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.productos h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.productos ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  list-style: none;
+}
+
+.productos li {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.productos li:hover {
+  transform: scale(1.05);
+}
+
+.productos img {
+  max-width: 100%;
+  display: block;
+}
+
+.productos span {
+  display: block;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--color-secundario);
+  color: white;
+}
