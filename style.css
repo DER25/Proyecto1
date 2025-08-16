@@ -33,6 +33,7 @@ header nav {
 
 header nav h1 {
   color: #fff;
+  font-size: 1.5rem;
 }
 
 header nav ul {
@@ -44,6 +45,7 @@ header nav ul {
 header nav a {
   color: #fff;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .productos {
@@ -93,4 +95,53 @@ footer {
   padding: 1rem;
   background-color: var(--color-secundario);
   color: white;
+}
+
+/* ===================== */
+/* MEDIA QUERIES         */
+/* ===================== */
+
+/* Móvil pequeño (hasta 375px) */
+@media (max-width: 375px) {
+  header nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  header nav h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  .productos ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet (376px - 768px) */
+@media (min-width: 376px) and (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .productos ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Escritorio grande (más de 768px) */
+@media (min-width: 769px) {
+  .productos ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
