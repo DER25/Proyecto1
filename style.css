@@ -33,7 +33,6 @@ header nav {
 
 header nav h1 {
   color: #fff;
-  font-size: 1.5rem;
 }
 
 header nav ul {
@@ -45,103 +44,74 @@ header nav ul {
 header nav a {
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
 }
 
-.productos {
-  max-width: var(--max-ancho);
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-.productos h2 {
+.banner {
+  background: url('https://picsum.photos/1200/300') center/cover;
+  padding: 3rem;
   text-align: center;
-  margin-bottom: 2rem;
+  color: #fff;
+}
+
+main {
+  max-width: var(--max-ancho);
+  margin: auto;
+  padding: 1rem;
 }
 
 .productos ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
   list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
 }
 
-.productos li {
+.productos article {
   background: #fff;
-  border: 1px solid #ddd;
+  padding: 1rem;
   border-radius: 8px;
-  overflow: hidden;
   text-align: center;
-  transition: transform 0.2s;
-}
-
-.productos li:hover {
-  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .productos img {
   max-width: 100%;
-  display: block;
+  border-radius: 8px;
 }
 
-.productos span {
-  display: block;
-  padding: 0.5rem;
-  font-weight: bold;
+.productos a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-primario);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
 }
 
 footer {
   text-align: center;
   padding: 1rem;
   background-color: var(--color-secundario);
-  color: white;
+  color: #fff;
+  margin-top: 2rem;
 }
 
-/* ===================== */
-/* MEDIA QUERIES         */
-/* ===================== */
-
-/* Móvil pequeño (hasta 375px) */
-@media (max-width: 375px) {
+/* Tablet */
+@media (max-width: 768px) {
   header nav {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  header nav ul {
     flex-direction: column;
     gap: 0.5rem;
   }
-
-  header nav h1 {
-    margin-bottom: 0.5rem;
-  }
-
-  .productos ul {
-    grid-template-columns: 1fr;
-  }
 }
 
-/* Tablet (376px - 768px) */
-@media (min-width: 376px) and (max-width: 768px) {
-  header nav {
-    flex-direction: column;
-    text-align: center;
+/* Móvil */
+@media (max-width: 375px) {
+  .banner {
+    padding: 1rem;
   }
-
   header nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .productos ul {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Escritorio grande (más de 768px) */
-@media (min-width: 769px) {
-  .productos ul {
-    grid-template-columns: repeat(4, 1fr);
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }
